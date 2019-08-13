@@ -1,0 +1,175 @@
+$parallax-height: 100vh;
+$center-margin: 0px auto;
+
+@mixin background-size($size){
+  background-size: $size;
+  -webkit-background-size: $size;
+  -moz-background-size: $size;
+  -o-background-size: $size;
+}
+
+@mixin parallax-background($file){
+  background: url($file) no-repeat center center fixed;
+  @include background-size(cover)
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  color: #2e3738;
+}
+
+
+#landscape { 
+	@include parallax-background("https://s3.amazonaws.com/codecademy-content/projects/sass/landscape.jpg");
+}
+
+#monkeys {
+	@include parallax-background("https://s3.amazonaws.com/codecademy-content/projects/sass/monkeys.jpg");
+}
+
+#landscape,
+#monkeys {
+  width: 100%;
+  height: 100vh;
+  perspective: 2px;
+  transform: translateZ(-1px);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+	h1{
+		text-transform: uppercase;
+	  	font-family: 'Bitter', serif;
+	  	letter-spacing: 0.06em;
+	  	font-size: 120px;
+	  	color: #FFF;
+	  	opacity: 0.7;
+	  	text-align: center;
+    	transform: translateZ(-2px);
+	}
+}
+
+p {
+	width: 70%;
+	padding: 5%;
+	margin: $center-margin;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 200;
+	line-height: 1.4;
+}
+
+
+// Notecard
+$stripe-properties: to bottom, 15%, blue, white;
+
+@mixin hover-color($color) {
+   &:hover{
+       color: $color;
+   }
+}
+
+@mixin transition($time){
+  transition: $time;
+  -webkit-transition: $time;
+  -moz-transition: $time;
+  -o-transition: $time;
+}
+
+@mixin transform-style($style){
+   transform-style: $style;
+  -moz-transform-style: $style;
+  -o-transform-style: $style;
+  -ms-transform-style: $style;
+  -webkit-transform-style: $style;
+}
+
+@mixin backface-visibility($visibility: hidden) { //Add an argument
+  backface-visibility: $visibility;
+  -webkit-backface-visibility: $visibility;
+  -moz-backface-visibility: $visibility;
+  -ms-backface-visibility: $visibility;
+  -o-backface-visibility: $visibility;
+}
+
+@mixin stripes($direction, $width-percent, $stripe-color, $stripe-background: #FFF) {
+  background: repeating-linear-gradient(
+    $direction,
+    $stripe-background,
+    $stripe-background ($width-percent - 1),
+    $stripe-color 1%,
+    $stripe-background $width-percent
+  );
+}
+
+@mixin transform($transformation) {
+  transform: $transformation;
+  -webkit-transform: $transformation;
+  -moz-transform: $transformation;
+  -ms-transform: $transformation;
+  -o-transform: $transformation;
+}
+
+@mixin photo-content($file) {
+  content: url(#{$file}.jpg);
+  object-fit: cover;
+}
+
+//Add your own mixins here
+
+.notecard {
+  width: 300px;
+  height: 180px;
+  border: 1px solid black;
+  display: inline-block;
+  margin: 20px;
+  font-family: Roboto, sans-serif;
+  box-shadow: 1px 1px 2px 2px rgba(0,0,0,.2);
+  	@include transition(0.4s);
+  	@include transform-style(preserve-3d);
+    &:hover{
+    	@include transform (rotatey(-180deg));
+  }
+
+  .front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    @include backface-visibility();
+  }
+
+  .front {
+  z-index: 3;
+  font-size: 20px;
+
+    .word {
+      display: block;
+      text-align: center;
+      position: relative;
+      top: 40%;
+      @include hover-color(red);
+    }
+  }
+
+
+  .back {
+  z-index: 1;
+  word-wrap: break-word;
+  line-height: 1.6;
+  	@include transform(rotatey(-180deg));
+
+    .definition {
+      width: 100%;
+      height: 100%;
+      	@include stripes($stripe-properties...);
+
+      .photo {
+        @include photo-content('titanosaur');
+        width: 60%;
+        margin: 0px auto;
+      }
+    }
+  }
+}
