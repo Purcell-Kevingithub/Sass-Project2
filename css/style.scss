@@ -1,4 +1,4 @@
-$parallax-height: 100vh;
+$parallax-height: 70vh;
 $center-margin: 0px auto;
 
 @mixin background-size($size){
@@ -24,7 +24,7 @@ body {
 
 #landscape { 
   @include parallax-background("https://s3.amazonaws.com/codecademy-content/projects/sass/landscape.jpg");
-  height: 100vh;
+  height: $parallax-height;
   perspective: 2px;
   transform: translateZ(-1px);
   overflow-x: hidden;
@@ -51,7 +51,7 @@ body {
 }
 
 #monkeys {
-  height: 100vh;
+  height: $parallax-height;
   perspective: 2px;
   transform: translateZ(-1px);
   overflow-x: hidden;
@@ -61,6 +61,73 @@ body {
   margin-top: 5%;
 
 	h1{
+		text-transform: uppercase;
+	  	font-family: 'Bitter', serif;
+	  	letter-spacing: 0.06em;
+	  	font-size: 120px;
+	  	color: #FFF;
+	  	opacity: 0.7;
+	  	text-align: center;
+    	transform: translateZ(-2px);
+	}
+}
+
+#yumfood {
+  @include parallax-background("../Images/pork-stick.jpg");
+  height: $parallax-height;
+  perspective: 2px;
+  transform: translateZ(-1px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  h1{
+		text-transform: uppercase;
+	  	font-family: 'Bitter', serif;
+	  	letter-spacing: 0.06em;
+	  	font-size: 120px;
+	  	color: #FFF;
+	  	opacity: 0.7;
+	  	text-align: center;
+    	transform: translateZ(-2px);
+	}
+}
+
+#temple {
+  @include parallax-background("../Images/temple.jpg");
+  height: $parallax-height;
+  perspective: 2px;
+  transform: translateZ(-1px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  h1{
+		text-transform: uppercase;
+	  	font-family: 'Bitter', serif;
+	  	letter-spacing: 0.06em;
+	  	font-size: 120px;
+	  	color: #FFF;
+	  	opacity: 0.7;
+	  	text-align: center;
+    	transform: translateZ(-2px);
+	}
+}
+
+
+#monkfire {
+  @include parallax-background("../Images/monkfire.jpg");
+  height: $parallax-height;
+  perspective: 2px;
+  transform: translateZ(-1px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  h1{
 		text-transform: uppercase;
 	  	font-family: 'Bitter', serif;
 	  	letter-spacing: 0.06em;
