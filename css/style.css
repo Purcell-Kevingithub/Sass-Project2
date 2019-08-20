@@ -6,6 +6,17 @@ body {
   color: #2e3738;
 }
 
+.background-title, #monkfire h1, #temple h1, #yumfood h1, #monkeys h1, #landscape h1 {
+  text-transform: uppercase;
+  font-family: "Bitter", serif;
+  letter-spacing: 0.06em;
+  font-size: 120px;
+  color: #FFF;
+  opacity: 0.7;
+  text-align: center;
+  transform: translateZ(-2px);
+}
+
 #landscape {
   background: url("https://s3.amazonaws.com/codecademy-content/projects/sass/landscape.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -21,26 +32,12 @@ body {
   margin-right: 5%;
   margin-top: 5%;
 }
-#landscape h1 {
-  text-transform: uppercase;
-  font-family: "Bitter", serif;
-  letter-spacing: 0.06em;
-  font-size: 120px;
-  color: #FFF;
-  opacity: 0.7;
-  text-align: center;
-  transform: translateZ(-2px);
-}
-
 #monkeys {
   background: url("https://s3.amazonaws.com/codecademy-content/projects/sass/monkeys.jpg") no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-}
-
-#monkeys {
   height: 70vh;
   perspective: 2px;
   transform: translateZ(-1px);
@@ -50,19 +47,8 @@ body {
   margin-right: 5%;
   margin-top: 5%;
 }
-#monkeys h1 {
-  text-transform: uppercase;
-  font-family: "Bitter", serif;
-  letter-spacing: 0.06em;
-  font-size: 120px;
-  color: #FFF;
-  opacity: 0.7;
-  text-align: center;
-  transform: translateZ(-2px);
-}
-
 #yumfood {
-  background: url("../Images/pork-stick.jpg") no-repeat center center fixed;
+  background: url("../Images/soupfood.jpg") no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -76,17 +62,6 @@ body {
   margin-right: 5%;
   margin-top: 5%;
 }
-#yumfood h1 {
-  text-transform: uppercase;
-  font-family: "Bitter", serif;
-  letter-spacing: 0.06em;
-  font-size: 120px;
-  color: #FFF;
-  opacity: 0.7;
-  text-align: center;
-  transform: translateZ(-2px);
-}
-
 #temple {
   background: url("../Images/temple.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -102,17 +77,6 @@ body {
   margin-right: 5%;
   margin-top: 5%;
 }
-#temple h1 {
-  text-transform: uppercase;
-  font-family: "Bitter", serif;
-  letter-spacing: 0.06em;
-  font-size: 120px;
-  color: #FFF;
-  opacity: 0.7;
-  text-align: center;
-  transform: translateZ(-2px);
-}
-
 #monkfire {
   background: url("../Images/monkfire.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -128,17 +92,6 @@ body {
   margin-right: 5%;
   margin-top: 5%;
 }
-#monkfire h1 {
-  text-transform: uppercase;
-  font-family: "Bitter", serif;
-  letter-spacing: 0.06em;
-  font-size: 120px;
-  color: #FFF;
-  opacity: 0.7;
-  text-align: center;
-  transform: translateZ(-2px);
-}
-
 p {
   width: 70%;
   padding: 5%;

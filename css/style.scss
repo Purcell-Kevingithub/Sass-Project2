@@ -21,6 +21,17 @@ body {
   color: #2e3738;
 }
 
+.background-title {
+  text-transform: uppercase;
+    font-family: 'Bitter', serif;
+    letter-spacing: 0.06em;
+    font-size: 120px;
+    color: #FFF;
+    opacity: 0.7;
+    text-align: center;
+    transform: translateZ(-2px);
+}
+
 
 #landscape { 
   @include parallax-background("https://s3.amazonaws.com/codecademy-content/projects/sass/landscape.jpg");
@@ -33,24 +44,15 @@ body {
   margin-right: 5%;
   margin-top: 5%;
 
-	h1{
-		text-transform: uppercase;
-	  	font-family: 'Bitter', serif;
-	  	letter-spacing: 0.06em;
-	  	font-size: 120px;
-	  	color: #FFF;
-	  	opacity: 0.7;
-	  	text-align: center;
-    	transform: translateZ(-2px);
-	}
+	h1 {
+    @extend .background-title;
+  }
   
 }
 
-#monkeys {
-	@include parallax-background("https://s3.amazonaws.com/codecademy-content/projects/sass/monkeys.jpg");
-}
 
 #monkeys {
+  @include parallax-background("https://s3.amazonaws.com/codecademy-content/projects/sass/monkeys.jpg");
   height: $parallax-height;
   perspective: 2px;
   transform: translateZ(-1px);
@@ -60,20 +62,13 @@ body {
   margin-right: 5%;
   margin-top: 5%;
 
-	h1{
-		text-transform: uppercase;
-	  	font-family: 'Bitter', serif;
-	  	letter-spacing: 0.06em;
-	  	font-size: 120px;
-	  	color: #FFF;
-	  	opacity: 0.7;
-	  	text-align: center;
-    	transform: translateZ(-2px);
-	}
+	h1 {
+    @extend .background-title;
+  }
 }
 
 #yumfood {
-  @include parallax-background("../Images/pork-stick.jpg");
+  @include parallax-background("../Images/soupfood.jpg");
   height: $parallax-height;
   perspective: 2px;
   transform: translateZ(-1px);
@@ -82,16 +77,9 @@ body {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 5%;
-  h1{
-		text-transform: uppercase;
-	  	font-family: 'Bitter', serif;
-	  	letter-spacing: 0.06em;
-	  	font-size: 120px;
-	  	color: #FFF;
-	  	opacity: 0.7;
-	  	text-align: center;
-    	transform: translateZ(-2px);
-	}
+  h1 {
+    @extend .background-title;
+  }
 }
 
 #temple {
@@ -104,16 +92,9 @@ body {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 5%;
-  h1{
-		text-transform: uppercase;
-	  	font-family: 'Bitter', serif;
-	  	letter-spacing: 0.06em;
-	  	font-size: 120px;
-	  	color: #FFF;
-	  	opacity: 0.7;
-	  	text-align: center;
-    	transform: translateZ(-2px);
-	}
+  h1 {
+    @extend .background-title;
+  }
 }
 
 
@@ -127,16 +108,9 @@ body {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 5%;
-  h1{
-		text-transform: uppercase;
-	  	font-family: 'Bitter', serif;
-	  	letter-spacing: 0.06em;
-	  	font-size: 120px;
-	  	color: #FFF;
-	  	opacity: 0.7;
-	  	text-align: center;
-    	transform: translateZ(-2px);
-	}
+  h1 {
+    @extend .background-title;
+  }
 }
 
 p {
