@@ -235,3 +235,9 @@ $stripe-properties: to bottom, 15%, blue, white;
     }
   }
 }
+
+@media (max-width: 768px) { 
+  h1 {
+    font-size: 65px !important;
+  }
+ }
